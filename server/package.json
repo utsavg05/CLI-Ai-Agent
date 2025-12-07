@@ -13,11 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^7.1.0",
+    "@prisma/client": "^6.15.0",
     "axios": "^1.13.2",
+    "better-auth": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "prisma": "^7.1.0"
+    "prisma": "^6.15.0"
   }
 }
