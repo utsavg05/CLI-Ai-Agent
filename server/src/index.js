@@ -8,17 +8,17 @@ dotenv.config();
 
 const app = express();
 
-app.all('/api/auth/*splat', toNodeHandler(auth));
-
-app.use(express.json());
-
 app.use(
     cors({
-        origin: 'http:localhost:3000',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        origin: 'http://localhost:3000',
+        methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     })
 );
+
+app.all('/api/auth/*splat', toNodeHandler(auth));
+
+app.use(express.json());
 
 app.get('/health', (req, res) => {
     res.send('OK');
