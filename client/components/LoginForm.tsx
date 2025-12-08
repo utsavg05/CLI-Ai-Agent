@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from 'react'
 import Image from 'next/image';
@@ -10,15 +10,6 @@ import { authClient } from '@/lib/auth-client';
 const LoginForm = () => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
-
-    const onLogin = async () => {
-        setIsLoading(true);
-        await authClient.signIn.social({
-            provider: 'github',
-            callbackURL: 'http://localhost:3000'
-        })
-        setIsLoading(false);
-    }
 
   return (
     <div className="flex flex-col gap-6 justify-center items-center ">
